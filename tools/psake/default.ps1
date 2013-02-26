@@ -9,7 +9,7 @@ Properties {
 	$nuget_exe = "$base_dir\.nuget\Nuget.exe"
 }
 
-Task Default -Depends BuildWebApiContrib, PrepareForTest, RunUnitTests, NuGetBuild
+Task Default -Depends BuildWebApiContrib, NuGetBuild #, PrepareForTest, RunUnitTests, NuGetBuild
 
 Task BuildWebApiContrib -Depends Clean, Build
 
