@@ -59,8 +59,8 @@ namespace WebApiContrib.Formatting.Bson
 
         public override Task<object> ReadFromStreamAsync(Type type, Stream stream, HttpContent content, IFormatterLogger formatterLogger)
         {
-            var tcs = new TaskCompletionSource<object>();
             if (content != null && content.Headers.ContentLength == 0) return null;
+            var tcs = new TaskCompletionSource<object>();
 
             try
             {
